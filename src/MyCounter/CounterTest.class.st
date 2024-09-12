@@ -14,6 +14,20 @@ CounterTest >> testCountIsSetAndRead [
 ]
 
 { #category : 'tests' }
+CounterTest >> testCounterStartingAt5 [
+	
+	self assert: (Counter startingAt: 5) count equals: 5
+]
+
+{ #category : 'tests' }
+CounterTest >> testCounterWellInitialized [
+
+	self
+		assert: (Counter new increment; increment; count)
+		equals: 2
+]
+
+{ #category : 'tests' }
 CounterTest >> testDecrement [
 
 	| c |
