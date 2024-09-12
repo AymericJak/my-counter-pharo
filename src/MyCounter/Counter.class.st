@@ -43,9 +43,15 @@ Counter >> increment [
 	count:= count + 1
 ]
 
-{ #category : 'accessing' }
+{ #category : 'initialization' }
 Counter >> initialize [
 
 	super initialize.
 	count:= 0
+]
+
+{ #category : 'printing' }
+Counter >> printOn: aStream [
+	super printOn: aStream.
+	aStream nextPutAll: ' with value: ', count printString.
 ]
